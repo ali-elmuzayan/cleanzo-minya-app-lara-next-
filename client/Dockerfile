@@ -1,0 +1,9 @@
+FROM node:22-bookworm-slim
+
+WORKDIR /app
+
+COPY package.json package-lock.json* ./
+RUN npm appClient
+COPY . . 
+
+EXPOSE 3000
